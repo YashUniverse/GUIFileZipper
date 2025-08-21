@@ -1,0 +1,46 @@
+👉 Bro, do you also want me to make it show a list of added todos inside the same window (instead of only printing in terminal)?
+
+You said:
+   window["todo"].update("") what is this 
+ChatGPT said:
+
+Good question bro 👍 let me explain clearly.
+
+🔹 In FreeSimpleGUI
+
+Every element (like a text box, button, etc.) can be given a key.
+Example:
+
+label = sg.InputText(tooltip="Enter todo", key="todo")
+
+
+Here 👉 the input box has the key "todo".
+This works like a unique ID for that widget.
+
+🔹 window["todo"]
+
+This means:
+
+Look inside the window.
+
+Find the element whose key="todo".
+
+In our case, it is the input box (sg.InputText).
+
+🔹 .update("")
+
+The .update() method is used to change the value or text of a GUI element.
+
+If it’s an InputText → .update("some text") changes the text inside the box.
+
+If it’s a Text label → .update("New Label") changes the text displayed.
+
+If it’s a Button → .update("New Name") changes the button label.
+
+🔹 So window["todo"].update("")
+
+Finds the input box (todo).
+
+Sets its text to "" (empty).
+
+Which clears the text box after you press ADD
